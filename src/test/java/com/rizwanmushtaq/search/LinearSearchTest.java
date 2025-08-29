@@ -11,7 +11,7 @@ class LinearSearchTest {
   private int[] testArray;
 
   @BeforeEach
-  void setUp() {
+  public void setUp() {
     search = new LinearSearch();
     testArray = new int[]{
         23, 50, 10, 99, 18, 23, 98, 84, 11, 10,
@@ -20,22 +20,22 @@ class LinearSearchTest {
   }
 
   @Test
-  void testElementPresent() {
+  public void testElementPresent() {
     assertEquals(2, search.linearSearch(testArray, 10));
   }
 
   @Test
-  void testElementAtBeginning() {
+  public void testElementAtBeginning() {
     assertEquals(0, search.linearSearch(testArray, 23));
   }
 
   @Test
-  void testElementAtEnd() {
+  public void testElementAtEnd() {
     assertEquals(17, search.linearSearch(testArray, 68));
   }
 
   @Test
-  void testElementNotPresent() {
+  public void testElementNotPresent() {
     assertEquals(-1, search.linearSearch(testArray, 999));
   }
 }
