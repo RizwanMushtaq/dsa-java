@@ -57,11 +57,10 @@ class TwoSumFastTest {
   }
 
   @Test
-  void testArrayWithDuplicatesOpposites() {
+  void testDuplicatesCountedSeparately() {
     int[] arr = {-1, -1, 1, 1};
-    // TwoSumFast finds only one pair (-1,1), not all 4 like brute-force
     assertEquals(2, twoSumFast.count(arr),
-        "TwoSumFast with duplicates only counts one unique pair (-1,1)");
+        "TwoSumFast counts duplicate pairs separately");
   }
 
   @Test
