@@ -1,4 +1,4 @@
-package com.rizwanmushtaq.search;
+package com.rizwanmushtaq.ch1sec1;
 
 public class LinearSearch {
   public int linearSearch(int[] arr, int target) {

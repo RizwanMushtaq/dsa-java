@@ -1,4 +1,4 @@
-package com.rizwanmushtaq.dataStructures;
+package com.rizwanmushtaq.ch1sec3;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

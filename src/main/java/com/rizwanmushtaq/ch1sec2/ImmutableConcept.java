@@ -1,4 +1,4 @@
-package com.rizwanmushtaq.immutibility;
+package com.rizwanmushtaq.ch1sec2;
 
 public class ImmutableConcept {
   public static void main(String[] args) {

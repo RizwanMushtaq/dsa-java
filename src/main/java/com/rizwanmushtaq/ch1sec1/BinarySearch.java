@@ -1,4 +1,4 @@
-package com.rizwanmushtaq.search;
+package com.rizwanmushtaq.ch1sec1;
 
 public class BinarySearch {
   public int binarySearch(int[] arr, int target) {

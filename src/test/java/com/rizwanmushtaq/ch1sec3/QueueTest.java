@@ -1,4 +1,4 @@
-package com.rizwanmushtaq.dataStructures;
+package com.rizwanmushtaq.ch1sec3;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
