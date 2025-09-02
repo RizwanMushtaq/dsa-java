@@ -9,14 +9,14 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UnionFindQuickFindTest {
-  private UnionFindQuickFind uf;
+public class UnionFindWeightedQuickUnionTest {
+  private UnionFindWeightedQuickUnion uf;
 
   @AfterEach
   void tearDown() {
     uf = null;
   }
-
+  
   @Test
   void testUnionFindWithTinyUFFile() throws FileNotFoundException {
     String filePath = "D:\\coding-projects\\test-data\\tinyUF.txt";
@@ -24,7 +24,7 @@ public class UnionFindQuickFindTest {
     try (Scanner scanner = new Scanner(new File(filePath))) {
 
       int n = scanner.nextInt();
-      uf = new UnionFindQuickFind(n);
+      uf = new UnionFindWeightedQuickUnion(n);
 
       while (scanner.hasNextInt()) {
         int p = scanner.nextInt();
@@ -56,7 +56,7 @@ public class UnionFindQuickFindTest {
     try (Scanner scanner = new Scanner(new File(filePath))) {
 
       int n = scanner.nextInt();
-      uf = new UnionFindQuickFind(n);
+      uf = new UnionFindWeightedQuickUnion(n);
 
       while (scanner.hasNextInt()) {
         int p = scanner.nextInt();
@@ -88,7 +88,7 @@ public class UnionFindQuickFindTest {
     try (Scanner scanner = new Scanner(new File(filePath))) {
 
       int n = scanner.nextInt();
-      uf = new UnionFindQuickFind(n);
+      uf = new UnionFindWeightedQuickUnion(n);
 
       while (scanner.hasNextInt()) {
         int p = scanner.nextInt();
