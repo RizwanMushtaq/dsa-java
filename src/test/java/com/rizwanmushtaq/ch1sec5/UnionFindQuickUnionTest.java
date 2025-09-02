@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UnionFindQuickFindTest {
+public class UnionFindQuickUnionTest {
   @Test
   void testUnionFindWithTinyUFFile() throws FileNotFoundException {
     String filePath = "D:\\coding-projects\\test-data\\tinyUF.txt";
