@@ -1,14 +1,16 @@
-package com.rizwanmushtaq.ch1section4;
+package com.rizwanmushtaq.ch1sec4;
 
-public class TwoSum {
+public class ThreeSum {
 
   public int count(int[] a) {
     int n = a.length;
     int count = 0;
     for (int i = 0; i < n; i++) {
       for (int j = i + 1; j < n; j++) {
-        if (a[i] + a[j] == 0) {
-          count++;
+        for (int k = j + 1; k < n; k++) {
+          if (a[i] + a[j] + a[k] == 0) {
+            count++;
+          }
         }
       }
     }

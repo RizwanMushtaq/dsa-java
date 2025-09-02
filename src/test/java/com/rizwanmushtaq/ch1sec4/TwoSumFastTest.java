@@ -1,4 +1,4 @@
-package com.rizwanmushtaq.ch1section4;
+package com.rizwanmushtaq.ch1sec4;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
