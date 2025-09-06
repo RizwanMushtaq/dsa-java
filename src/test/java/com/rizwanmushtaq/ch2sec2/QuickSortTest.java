@@ -45,6 +45,14 @@ class QuickSortTest {
   }
 
   @Test
+  void testRandomArray() {
+    Integer[] arr = {5, 2, 6, 4, 1, 3};
+    QuickSort.sort(arr);
+    assertArrayEquals(new Integer[]{1, 2, 3, 4, 5, 6}, arr,
+        "Array should be sorted correctly");
+  }
+
+  @Test
   void testArrayWithNegativeNumbers() {
     Integer[] arr = {-3, -1, -7, 2, 0, 5};
     QuickSort.sort(arr);
