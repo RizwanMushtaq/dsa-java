@@ -9,18 +9,6 @@ public class LL {
     this.size = 0;
   }
 
-  public static void main(String args[]) {
-    LL list = new LL();
-    list.addFirst("a");
-    list.addFirst("is");
-    list.addLast("list");
-    list.addFirst("This");
-    list.printList();
-
-    list.add(2, "hello");
-    list.printList();
-  }
-
   public int getSize() {
     return this.size;
   }
@@ -64,11 +52,12 @@ public class LL {
       System.out.println("Invalid Index value");
       return;
     }
-    size++;
+
     Node newNode = new Node(data);
     if (head == null || index == 0) {
       newNode.next = head;
       head = newNode;
+      size++;
       return;
     }
     Node currNode = head;
@@ -77,6 +66,7 @@ public class LL {
         Node nextNode = currNode.next;
         currNode.next = newNode;
         newNode.next = nextNode;
+        size++;
         break;
       }
       currNode = currNode.next;
@@ -115,6 +105,39 @@ public class LL {
 
     tempNode.next = null;
     this.size--;
+  }
+
+  // delete at specific index
+  public void delete(int index) {
+    if (index >= size || index < 0) {
+      System.out.println("Invalid Index value");
+      return;
+    }
+    // when list is empty
+    if (size == 0) {
+      System.out.println("List is empty");
+      return;
+    }
+
+    if (size == 1 || index == 0) {
+      Node nextNode = head.next;
+      head = nextNode;
+      size--;
+      return;
+    }
+
+    Node currNode = head.next;
+    Node previousNode = head;
+    for (int i = 1; i < size; i++) {
+      if (i == index) {
+        Node nextNode = currNode.next;
+        previousNode.next = nextNode;
+        size--;
+        break;
+      }
+      currNode = currNode.next;
+      previousNode = previousNode.next;
+    }
   }
 
   // print
