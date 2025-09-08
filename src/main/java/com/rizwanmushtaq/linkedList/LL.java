@@ -1,7 +1,13 @@
 package com.rizwanmushtaq.linkedList;
 
 public class LL {
-  private Node head = null;
+  private Node head;
+  private int size;
+
+  public LL() {
+    this.head = null;
+    this.size = 0;
+  }
 
   public static void main(String args[]) {
     LL list = new LL();
@@ -9,8 +15,11 @@ public class LL {
     list.addFirst("is");
     list.addLast("list");
     list.addFirst("This");
-
     list.printList();
+  }
+
+  public int getSize() {
+    return this.size;
   }
 
   // add First
@@ -18,11 +27,13 @@ public class LL {
     Node newNode = new Node(data);
     if (head == null) {
       head = newNode;
+      this.size++;
       return;
     }
 
     newNode.next = head;
     head = newNode;
+    this.size++;
   }
 
   // add Last
@@ -30,6 +41,7 @@ public class LL {
     Node newNode = new Node(data);
     if (head == null) {
       head = newNode;
+      this.size++;
       return;
     }
 
@@ -40,6 +52,40 @@ public class LL {
 
     currNode.next = newNode;
     newNode.next = null;
+    this.size++;
+  }
+
+  // delete First
+  public void deleteFirst() {
+    if (head == null) {
+      System.out.println("The List is empty");
+      return;
+    }
+
+    head = head.next;
+    this.size--;
+  }
+
+  // delete Last
+  public void deleteLast() {
+    if (head == null) {
+      System.out.println("The List is empty");
+      return;
+    }
+
+    // when there is single element
+    if (head.next == null) {
+      head = null;
+      return;
+    }
+
+    Node tempNode = head;
+    while (tempNode.next.next != null) {
+      tempNode = tempNode.next;
+    }
+
+    tempNode.next = null;
+    this.size--;
   }
 
   // print
@@ -50,6 +96,7 @@ public class LL {
     }
 
     Node currNode = head;
+    System.out.println("size of list is " + this.getSize());
     while (currNode != null) {
       System.out.print(currNode.data + " -> ");
       currNode = currNode.next;
