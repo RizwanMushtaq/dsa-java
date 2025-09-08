@@ -16,6 +16,9 @@ public class LL {
     list.addLast("list");
     list.addFirst("This");
     list.printList();
+
+    list.add(2, "hello");
+    list.printList();
   }
 
   public int getSize() {
@@ -55,6 +58,31 @@ public class LL {
     this.size++;
   }
 
+  // insert at specific index
+  public void add(int index, String data) {
+    if (index > size || index < 0) {
+      System.out.println("Invalid Index value");
+      return;
+    }
+    size++;
+    Node newNode = new Node(data);
+    if (head == null || index == 0) {
+      newNode.next = head;
+      head = newNode;
+      return;
+    }
+    Node currNode = head;
+    for (int i = 1; i < size; i++) {
+      if (i == index) {
+        Node nextNode = currNode.next;
+        currNode.next = newNode;
+        newNode.next = nextNode;
+        break;
+      }
+      currNode = currNode.next;
+    }
+  }
+
   // delete First
   public void deleteFirst() {
     if (head == null) {
@@ -76,6 +104,7 @@ public class LL {
     // when there is single element
     if (head.next == null) {
       head = null;
+      this.size--;
       return;
     }
 
