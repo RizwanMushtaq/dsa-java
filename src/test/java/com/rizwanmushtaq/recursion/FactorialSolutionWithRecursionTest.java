@@ -3,7 +3,7 @@ package com.rizwanmushtaq.recursion;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FactorialSolutionWithRecursionTest {
   private final FactorialSolutionWithRecursion factorial = new FactorialSolutionWithRecursion();
@@ -31,10 +31,7 @@ public class FactorialSolutionWithRecursionTest {
 
   @Test
   void testFactorialOfLargeNumber() {
-    // 13! = 6227020800, but int overflows, so check for overflow behavior
-    int result = factorial.getFactorial(10000);
-    System.out.println(result);
-    assertTrue(result < 0 || result == 0); // overflow or zero
+    assertThrows(StackOverflowError.class, () -> factorial.getFactorial(10000));
   }
 }
 
