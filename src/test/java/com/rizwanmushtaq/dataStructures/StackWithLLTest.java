@@ -8,13 +8,13 @@ import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StackTest {
+class StackWithLLTest {
 
-  private Stack<Integer> stack;
+  private StackWithLL<Integer> stack;
 
   @BeforeEach
   void setUp() {
-    stack = new Stack<>();
+    stack = new StackWithLL<>();
   }
 
   @Test

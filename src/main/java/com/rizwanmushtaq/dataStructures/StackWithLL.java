@@ -3,12 +3,15 @@ package com.rizwanmushtaq.dataStructures;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Stack<Item> {
-  private Node first; // top of stack
+/**
+ * Last In - Last Out
+ */
+public class StackWithLL<Item> {
+  private Node top; // top of stack
   private int n; // size of the stack
 
   public boolean isEmpty() {
-    return first == null;
+    return top == null;
   }
 
   public int size() {
@@ -16,17 +19,17 @@ public class Stack<Item> {
   }
 
   public void push(Item item) {
-    Node oldFirst = first;
-    first = new Node();
-    first.item = item;
-    first.next = oldFirst;
+    Node oldTop = top;
+    top = new Node();
+    top.item = item;
+    top.next = oldTop;
     n++;
   }
 
   public Item pop() {
     if (isEmpty()) throw new RuntimeException("Stack underflow");
-    Item item = first.item;
-    first = first.next;
+    Item item = top.item;
+    top = top.next;
     n--;
     return item;
   }
@@ -41,7 +44,7 @@ public class Stack<Item> {
   }
 
   private class ListIterator implements Iterator<Item> {
-    private Node current = first;
+    private Node current = top;
 
     public boolean hasNext() {
       return current != null;
