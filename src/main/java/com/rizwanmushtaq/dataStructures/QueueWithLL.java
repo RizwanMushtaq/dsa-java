@@ -3,7 +3,10 @@ package com.rizwanmushtaq.dataStructures;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Queue<Item> {
+/**
+ * First In - First Out
+ */
+public class QueueWithLL<Item> {
   private Node first; // beginning of queue
   private Node last;  // end of queue
   private int n;     // number of elements on queue
