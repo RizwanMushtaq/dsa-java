@@ -2,18 +2,18 @@ package com.rizwanmushtaq.strings;
 
 public class IsAlphanumeric {
   public boolean isAlphanumeric(char c) {
-    if (((int) c) >= ((int) 'a') && ((int) c) <= ((int) 'z')) {
-      return true;
-    }
+    return isUppercase(c) || isLowercase(c) || isDigit(c);
+  }
 
-    if (((int) c) >= ((int) 'A') && ((int) c) <= ((int) 'Z')) {
-      return true;
-    }
+  private boolean isLowercase(char c) {
+    return ((int) c) >= ((int) 'a') && ((int) c) <= ((int) 'z');
+  }
 
-    if (((int) c) >= ((int) '0') && ((int) c) <= ((int) '9')) {
-      return true;
-    }
+  private boolean isUppercase(char c) {
+    return ((int) c) >= ((int) 'A') && ((int) c) <= ((int) 'Z');
+  }
 
-    return false;
+  private boolean isDigit(char c) {
+    return ((int) c) >= ((int) '0') && ((int) c) <= ((int) '9');
   }
 }

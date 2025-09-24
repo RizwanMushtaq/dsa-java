@@ -20,4 +20,11 @@ public class IsAlphanumericTest {
     assertEquals(true, isAlphanumeric.isAlphanumeric('A'));
     assertEquals(false, isAlphanumeric.isAlphanumeric('#'));
   }
+
+  @Test
+  public void testDigits() {
+    assertEquals(true, isAlphanumeric.isAlphanumeric('5'));
+    assertEquals(true, isAlphanumeric.isAlphanumeric('9'));
+    assertEquals(true, isAlphanumeric.isAlphanumeric('0'));
+  }
 }
