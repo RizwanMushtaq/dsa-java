@@ -1,4 +1,4 @@
-package com.rizwanmushtaq.twoPointers;
+package com.rizwanmushtaq.TwoPointers;
 
 /*
  * Container With Most Water
@@ -24,7 +24,7 @@ package com.rizwanmushtaq.twoPointers;
  * 2 <= n <= 10^5
  * 0 <= height[i] <= 10^4
  */
-public class Leetcode11 {
+public class ContainerWithMostWaterL11 {
   public int maxArea(int[] height) {
     int maxArea = 0;
     int left = 0;

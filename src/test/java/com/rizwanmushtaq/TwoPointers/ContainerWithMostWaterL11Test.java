@@ -1,13 +1,13 @@
-package com.rizwanmushtaq.twoPointers;
+package com.rizwanmushtaq.TwoPointers;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class Leetcode11Test {
+class ContainerWithMostWaterL11Test {
 
-  private final Leetcode11 solver = new Leetcode11();
+  private final ContainerWithMostWaterL11 solver = new ContainerWithMostWaterL11();
 
   @Test
   void testExampleCase() {
