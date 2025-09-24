@@ -11,10 +11,6 @@ public class StringSplit {
       return result.toArray(new String[0]);
     }
 
-    if (s.startsWith(String.valueOf(c))) {
-      result.toArray(new String[0]);
-    }
-
     String currentWord = "";
     for (int i = 0; i < s.length(); i++) {
       if (s.charAt(i) != c) {
@@ -23,12 +19,9 @@ public class StringSplit {
         result.add(currentWord);
         currentWord = "";
       }
-
-      if (i == s.length() - 1) {
-        result.add(currentWord);
-        currentWord = "";
-      }
     }
+
+    result.add(currentWord);
 
     return result.stream().toArray(String[]::new);
   }

@@ -15,15 +15,29 @@ public class StringSplitTest {
 
   @Test
   public void testStringSplit() {
-    String s = "apple banana";
-    char c = ' ';
-    String[] expectedArray = {"apple", "banana"};
     assertArrayEquals(
-        expectedArray,
-        stringSplit.stringSplit(s, c));
+        new String[]{"apple", "banana"},
+        stringSplit.stringSplit("apple banana", ' '));
+  }
 
+  @Test
+  public void testEmptyString() {
     assertArrayEquals(
-        new String[0],
-        stringSplit.stringSplit("", c));
+        new String[]{},
+        stringSplit.stringSplit("", ' '));
+  }
+
+  @Test
+  public void testStringWithCommas() {
+    assertArrayEquals(
+        new String[]{"", "hello", "world", ""},
+        stringSplit.stringSplit(",hello,world,", ','));
+  }
+
+  @Test
+  public void testStringWithOnlyCommas() {
+    assertArrayEquals(
+        new String[]{"", ""},
+        stringSplit.stringSplit(",", ','));
   }
 }
