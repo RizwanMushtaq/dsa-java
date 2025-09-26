@@ -1,6 +1,6 @@
 package com.rizwanmushtaq.TwoPointers;
 
-/*
+/**
  * Container With Most Water
  * https://leetcode.com/problems/container-with-most-water/
  * You are given an integer array height of length n. There are n vertical lines drawn such
