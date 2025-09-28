@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 public class MyThreadApp02 {
   public static void main(String[] args) {
     Runnable myThreadJob = new MyThreadJob();
-    
+
     /**
      * A Better alternation to run Threads
      * Don't Manage the threads at all
@@ -16,5 +16,6 @@ public class MyThreadApp02 {
 
     System.out.println(Thread.currentThread().getName() + " : in main");
     Thread.dumpStack();
+    executorService.shutdown();
   }
 }
