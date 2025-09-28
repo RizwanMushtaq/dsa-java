@@ -1,4 +1,4 @@
-package com.rizwanmushtaq.networkingAndThreads.concerrencyIssues.rizwanAndMogheeApp;
+package com.rizwanmushtaq.networkingAndThreads.rizwanAndMogheeApp;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
